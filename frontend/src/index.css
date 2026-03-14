@@ -1,0 +1,33 @@
+/* Vite default overrides — reset the broken defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CRITICAL FIX: Vite default sets body { display:flex; place-items:center }
+   which breaks all page layouts. Override completely. */
+body {
+  display: block !important;
+  place-items: unset !important;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Remove Vite's dark background default */
+body {
+  background-color: unset;
+  color: unset;
+}
+
+h1 { font-size: unset; line-height: unset; }
+button { all: unset; cursor: pointer; }
+a { color: unset; text-decoration: none; }
